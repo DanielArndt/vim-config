@@ -1,3 +1,24 @@
 [submodule "sources_non_forked/csapprox"]
 	path = sources_non_forked/csapprox
 	url = https://github.com/godlygeek/csapprox
+[submodule "sources_non_forked/editorconfig-vim"]
+	path = sources_non_forked/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim
+[submodule "sources_non_forked/julia-vim"]
+	path = sources_non_forked/julia-vim
+	url = https://github.com/JuliaLang/julia-vim.git
+[submodule "sources_non_forked/riv.vim"]
+	path = sources_non_forked/riv.vim
+	url = https://github.com/Rykka/riv.vim
+[submodule "sources_non_forked/tagbar"]
+	path = sources_non_forked/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule "sources_non_forked/vim-flake8"]
+	path = sources_non_forked/vim-flake8
+	url = https://github.com/nvie/vim-flake8
+[submodule "sources_non_forked/vim-misc"]
+	path = sources_non_forked/vim-misc
+	url = https://github.com/xolox/vim-misc
+[submodule "sources_non_forked/vim-virtualenv"]
+	path = sources_non_forked/vim-virtualenv
+	url = https://github.com/jmcantrell/vim-virtualenv
