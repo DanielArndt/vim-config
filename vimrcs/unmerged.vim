@@ -178,6 +178,7 @@ if exists("g:vimpager.enabled")
     map q :q!<CR>
     " Set read-only, non-modifiable buffer
     set nomodifiable
+    set nonumber
     " Don't show trailing chars
     highlight ExtraWhitespace none
 endif
@@ -188,6 +189,10 @@ noremap <leader>u :CtrlPTag<CR>
 
 " Ctrl-w Ctrl-w goes to last window. Who the hell wants to cycle?
 noremap <C-w><C-w> <C-w><C-p>
+
+" Ctrl-w Ctrl-e closes all quickfix and preview windows
+inoremap <C-w><C-e> <C-o>:cclose<CR><C-o>:pclose<CR>
+noremap <C-w><C-e> :cclose<CR>:pclose<CR>
 
 " Flake8 - Show me python errors as soon as I save
 function Flake8ifexists()
