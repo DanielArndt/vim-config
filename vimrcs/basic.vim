@@ -5,6 +5,9 @@
 if !isdirectory($HOME."/.vim_runtime/temp_dirs")
     call mkdir($HOME."/.vim_runtime/temp_dirs", "p")
 endif
+if !isdirectory($HOME."/.vim_runtime/backup")
+    call mkdir($HOME."/.vim_runtime/backup", "p")
+endif
 " Sets how many lines of history VIM has to remember
 set history=500
 
