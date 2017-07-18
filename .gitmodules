@@ -22,3 +22,6 @@
 [submodule "sources_non_forked/vim-virtualenv"]
 	path = sources_non_forked/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv
+[submodule "sources_non_forked/vim-fugitive"]
+	path = sources_non_forked/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
