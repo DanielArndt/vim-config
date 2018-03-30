@@ -128,7 +128,9 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " Enable mouse detection for a larger area
-set ttymouse=sgr
+if !has('nvim')
+  set ttymouse=sgr
+endif
 
 " Allow C-a increment in visual mode... just increase each number.
 function! Incr()
