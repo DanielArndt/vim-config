@@ -28,3 +28,9 @@
 [submodule "sources_non_forked/Vim-Jinja2-Syntax"]
 	path = sources_non_forked/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax
+[submodule "sources_non_forked/vim-solidity"]
+	path = sources_non_forked/vim-solidity
+	url = https://github.com/tomlion/vim-solidity.git
+[submodule "sources_non_forked/vim-table-mode"]
+	path = sources_non_forked/vim-table-mode
+	url = git@github.com:dhruvasagar/vim-table-mode.git
