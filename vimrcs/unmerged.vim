@@ -44,6 +44,7 @@ nnoremap <CR><CR> i<CR><Esc>==
 runtime macros/matchit.vim
 
 let g:ycm_collect_identifiers_from_tags_files = 1
+
 :set tags=.git/tags;
 ":let g:easytags_dynamic_files = 2
 " Local replace
@@ -224,3 +225,10 @@ noremap <leader>ba :NERDTreeClose<CR>:bufdo bd<CR>
 vnoremap `` <esc>`>a``<esc>`<i``<esc>
 
 noremap <leader>q <C-w>q
+
+nmap <F10> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' > cscope.files<CR>
+  \:!cscope -b -i cscope.files -f cscope.out<CR>
+  \:cs reset<CR>
+
+" map <C-c> :!sl<CR><CR>
+" imap <C-c> <ESC>:!sl<CR><CR>
