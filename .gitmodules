@@ -43,3 +43,6 @@
 [submodule "sources_non_forked/salt-vim"]
 	path = sources_non_forked/salt-vim
 	url = https://github.com/saltstack/salt-vim.git
+[submodule "sources_non_forked/syntastic"]
+	path = sources_non_forked/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
