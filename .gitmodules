@@ -49,3 +49,9 @@
 [submodule "sources_non_forked/vim-surround"]
 	path = sources_non_forked/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "sources_non_forked/vim-jsx"]
+	path = sources_non_forked/vim-jsx
+	url = https://github.com/mxw/vim-jsx
+[submodule "sources_non_forked/vim-javascript"]
+	path = sources_non_forked/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
