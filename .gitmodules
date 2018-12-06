@@ -55,3 +55,6 @@
 [submodule "sources_non_forked/vim-javascript"]
 	path = sources_non_forked/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
+[submodule "sources_non_forked/vim-terraform"]
+	path = sources_non_forked/vim-terraform
+	url = https://github.com/hashivim/vim-terraform
