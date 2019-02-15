@@ -168,8 +168,8 @@ nnoremap Q <nop>
 set pastetoggle=<F2>
 
 " Refresh
-map <F5> :checktime<CR>
-imap <F5> <C-o>:checktime<CR>
+map <F5> :e!<CR>:syntax sync fromstart<CR>
+imap <F5> <C-o><F5>
 
 " Stop vimpager from FREAKING out
 if exists("g:vimpager.enabled")
@@ -233,5 +233,5 @@ nmap <F10> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.
 " map <C-c> :!sl<CR><CR>
 " imap <C-c> <ESC>:!sl<CR><CR>
 "
-autocmd BufEnter *Jenkinsfile* :syntax sync fromstart
+syntax sync minlines=200
 " set clipboard=unnamedplus
