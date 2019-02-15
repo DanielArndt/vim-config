@@ -23,7 +23,7 @@ let g:ctrlp_jump_to_buffer = 0
 " https://github.com/kien/ctrlp.vim/issues/280
 let g:ctrlp_buffer_func = { 'enter': 'CtrlPEnter' }
 func! CtrlPEnter()
-  nnoremap <buffer> <silent> <C-@> :call <sid>CtrlPDeleteBuffer()<cr>
+  nnoremap <buffer> <silent> <C-Space> :call <sid>CtrlPDeleteBuffer()<cr>
 endfunc
 func! s:CtrlPDeleteBuffer()
   let line = getline('.')
@@ -168,8 +168,8 @@ nnoremap Q <nop>
 set pastetoggle=<F2>
 
 " Refresh
-map <F5> :checktime<CR>
-imap <F5> <C-o>:checktime<CR>
+map <F5> :e!<CR>:syntax sync fromstart<CR>
+imap <F5> <C-o><F5>
 
 " Stop vimpager from FREAKING out
 if exists("g:vimpager.enabled")
@@ -232,3 +232,6 @@ nmap <F10> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.
 
 " map <C-c> :!sl<CR><CR>
 " imap <C-c> <ESC>:!sl<CR><CR>
+"
+syntax sync minlines=200
+" set clipboard=unnamedplus
