@@ -61,3 +61,6 @@
 [submodule "sources_non_forked/groovy.vim"]
 	path = sources_non_forked/groovy.vim
 	url = https://github.com/vim-scripts/groovy.vim.git
+[submodule "sources_non_forked/ultisnips"]
+	path = sources_non_forked/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
