@@ -235,3 +235,6 @@ nmap <F10> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.
 "
 syntax sync minlines=200
 " set clipboard=unnamedplus
+
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
