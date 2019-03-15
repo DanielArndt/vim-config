@@ -64,3 +64,6 @@
 [submodule "sources_non_forked/ultisnips"]
 	path = sources_non_forked/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+[submodule "sources_non_forked/vim-bookmarks"]
+	path = sources_non_forked/vim-bookmarks
+	url = git@github.com:MattesGroeger/vim-bookmarks.git
