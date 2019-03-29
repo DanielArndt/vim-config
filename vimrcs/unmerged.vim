@@ -36,11 +36,10 @@ endfunc
 
 " If there are mutiple tags, ask which one the user wants to jump to
 nnoremap <C-]> g<C-]>
-" Jump directly to tag in left pane, keep current location in right
 nnoremap g] <C-w>o<C-w><C-v>g<C-]>
 
 " Double enter in normal mode inserts a newline and aligns the text
-nnoremap <CR><CR> i<CR><Esc>==
+" nnoremap <CR><CR> i<CR><Esc>==
 
 " Julia block-wise movement requires matchit
 runtime macros/matchit.vim
