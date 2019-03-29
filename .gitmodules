@@ -67,3 +67,6 @@
 [submodule "sources_non_forked/vim-bookmarks"]
 	path = sources_non_forked/vim-bookmarks
 	url = git@github.com:MattesGroeger/vim-bookmarks.git
+[submodule "sources_non_forked/vim-indentwise"]
+	path = sources_non_forked/vim-indentwise
+	url = git@github.com:jeetsukumaran/vim-indentwise.git
