@@ -1,3 +1,4 @@
-custom_config.vim
+/local/*
+!/local/README
 backup
 temp_dirs

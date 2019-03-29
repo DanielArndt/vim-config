@@ -432,8 +432,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>e :e! ~/.vim_runtime/custom_config.vim<cr>
-autocmd! bufwritepost vimrc source ~/.vim_runtime/custom_config.vim
+map <leader>e :e! ~/.vim_runtime/local/local_config.vim<cr>
+autocmd! bufwritepost vimrc source ~/.vim_runtime/local/local_config.vim
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
