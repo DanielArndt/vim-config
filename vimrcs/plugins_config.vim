@@ -53,12 +53,9 @@ let g:user_zen_mode='a'
 
 
 """"""""""""""""""""""""""""""
-" => snipMate (beside <TAB> support <CTRL-j>)
+" => UltiSnips
 """"""""""""""""""""""""""""""
-" ino <c-s> <c-r>=snipMate#TriggerSnippet()<cr>
-" snor <c-s> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
 let g:UltiSnipsExpandTrigger="<c-s>"
-let g:UltiSnipsListSnippets="<c-e>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
