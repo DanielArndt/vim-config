@@ -13,7 +13,10 @@ let g:tagbar_autoclose = 1
 
 " Show tabs
 set list
-set listchars=trail:·,tab:>·
+
+" Set visible characters for trailing spaces, tabs, and lines that continue off
+" screen.
+set listchars=trail:·,tab:>·,precedes:^,extends:$
 
 " Don't go to the buffer when using ctrlp and the buffer is already open
 " somewhere, open it in the current window
@@ -46,7 +49,7 @@ runtime macros/matchit.vim
 
 let g:ycm_collect_identifiers_from_tags_files = 1
 
-:set tags=.git/tags;
+set tags=.git/tags;
 ":let g:easytags_dynamic_files = 2
 " Local replace
 "
@@ -114,8 +117,8 @@ map <leader>tb :TagbarToggle<CR>
 " Show line numbers
 set number
 
-" Set a couple markers
-set colorcolumn=80,120
+" Set a long line marker at the same location as textwidth
+set colorcolumn=+1
 " Highlight current line - allows you to track cursor position more easily
 set cursorline
 " Automatically indent when moving to a new line
