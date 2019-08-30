@@ -73,3 +73,6 @@
 [submodule "sources_non_forked/python-syntax"]
 	path = sources_non_forked/python-syntax
 	url = https://github.com/vim-python/python-syntax
+[submodule "sources_non_forked/nginx.vim"]
+	path = sources_non_forked/nginx.vim
+	url = https://github.com/chr4/nginx.vim
