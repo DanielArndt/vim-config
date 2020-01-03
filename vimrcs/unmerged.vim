@@ -198,7 +198,7 @@ noremap <leader>u :CtrlPTag<CR>
 noremap <C-w><C-w> <C-w><C-p>
 
 " Ctrl-w Ctrl-e closes all quickfix and preview windows
-inoremap <C-w><C-e> <C-o>:cclose<CR><C-o>:pclose<CR>
+" Conflicts with <C-w> (delete back a word) inoremap <C-w><C-e> <C-o>:cclose<CR><C-o>:pclose<CR>
 noremap <C-w><C-e> :cclose<CR>:pclose<CR>
 
 " Flake8 - Show me python errors as soon as I save
