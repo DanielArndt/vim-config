@@ -430,6 +430,8 @@ endif
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>e :e! ~/.vim_runtime/local/local_config.vim<cr>
+" todo list / scratch pad
+map ,t :e! ~/Documents/scratch.rst<cr>
 autocmd! bufwritepost vimrc source ~/.vim_runtime/local/local_config.vim
 
 
