@@ -73,3 +73,6 @@
 [submodule "sources_non_forked/nginx.vim"]
 	path = sources_non_forked/nginx.vim
 	url = https://github.com/chr4/nginx.vim
+[submodule "sources_non_forked/vim-multiple-cursors"]
+	path = sources_non_forked/vim-multiple-cursors
+	url = git@github.com:terryma/vim-multiple-cursors.git
