@@ -49,7 +49,6 @@ runtime macros/matchit.vim
 
 let g:ycm_collect_identifiers_from_tags_files = 1
 
-set tags=.git/tags;
 ":let g:easytags_dynamic_files = 2
 " Local replace
 "
