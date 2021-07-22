@@ -128,10 +128,10 @@ snippet _
 	__${1:init}__
 # python debugger (pdb)
 snippet pdb
-	import pdb; pdb.set_trace()
+	__import__("pdb").set_trace()  # FIXME
 # ipython debugger (ipdb)
 snippet ipdb
-	import ipdb; ipdb.set_trace()
+	__import__("ipdb").set_trace()  # FIXME
 # embed ipython itself
 snippet iem
 	import IPython; IPython.embed()

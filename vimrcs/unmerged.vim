@@ -22,11 +22,11 @@ set listchars=trail:·,tab:>·,precedes:^,extends:$
 " somewhere, open it in the current window
 let g:ctrlp_jump_to_buffer = 0
 
-" Kill buffers in Ctrl-P with Ctrl-@
+" Kill buffers in Ctrl-P with Ctrl-q
 " https://github.com/kien/ctrlp.vim/issues/280
 let g:ctrlp_buffer_func = { 'enter': 'CtrlPEnter' }
 func! CtrlPEnter()
-  nnoremap <buffer> <silent> <C-Space> :call <sid>CtrlPDeleteBuffer()<cr>
+  nnoremap <buffer> <silent> <C-q> :call <sid>CtrlPDeleteBuffer()<cr>
 endfunc
 func! s:CtrlPDeleteBuffer()
   let line = getline('.')
@@ -41,7 +41,7 @@ endfunc
 nnoremap <C-]> g<C-]>
 
 " 'Follow' a tag in a second window pane on the right
-nnoremap g] <C-w>o<C-w><C-v>g<C-]>
+nnoremap <leader>] <C-w>o<C-w><C-v>g<C-]>zt
 
 " Inserts a newline and aligns the text
 nnoremap <leader><CR> i<CR><Esc>==
@@ -231,7 +231,7 @@ vnoremap `` <esc>`>a``<esc>`<i``<esc>
 
 noremap <leader>q <C-w>q
 
-nmap <F10> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' > cscope.files<CR>
+nmap <F9> :!find . -iname '*.c' -o -iname '*.cpp' -o -iname '*.h' -o -iname '*.hpp' > cscope.files<CR>
   \:!cscope -b -i cscope.files -f cscope.out<CR>
   \:cs reset<CR>
 
