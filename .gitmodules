@@ -1,6 +1,3 @@
-[submodule "sources_non_forked/csapprox"]
-	path = sources_non_forked/csapprox
-	url = https://github.com/godlygeek/csapprox
 [submodule "sources_non_forked/editorconfig-vim"]
 	path = sources_non_forked/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim
@@ -22,9 +19,6 @@
 [submodule "sources_non_forked/vim-virtualenv"]
 	path = sources_non_forked/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv
-[submodule "sources_non_forked/vim-fugitive"]
-	path = sources_non_forked/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
 [submodule "sources_non_forked/vim-solidity"]
 	path = sources_non_forked/vim-solidity
 	url = https://github.com/tomlion/vim-solidity.git
@@ -35,7 +29,7 @@
 	path = sources_non_forked/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "sources_non_forked/vim-tmux-navigator"]
-	path = sources_non_forked/vim-tmux-navigator
+	path = pack/main/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
 [submodule "sources_non_forked/salt-vim"]
 	path = sources_non_forked/salt-vim
@@ -86,5 +80,14 @@
 	path = sources_non_forked/jq.vim
 	url = https://github.com/vito-c/jq.vim
 [submodule "sources_non_forked/papercolor-theme"]
-	path = sources_non_forked/papercolor-theme
+	path = pack/theme/start/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme
+[submodule "pack/main/start/vim-fugitive"]
+	path = pack/main/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/theme/start/papercolor-theme"]
+	path = pack/theme/start/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "pack/main/start/CSApprox"]
+	path = pack/main/start/CSApprox
+	url = https://github.com/vim-scripts/CSApprox
