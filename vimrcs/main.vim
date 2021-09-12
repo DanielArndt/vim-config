@@ -110,7 +110,7 @@ command W w !sudo tee % > /dev/null
 " => Fast editing and reloading of vimrc configs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>e :e! ~/.vim/local/local_config.vim<cr>
-autocmd! bufwritepost vimrc source ~/.vim_runtime/local/local_config.vim
+autocmd! bufwritepost vimrc source ~/.vim/local/local_config.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Command mode related

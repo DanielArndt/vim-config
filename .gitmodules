@@ -91,3 +91,6 @@
 [submodule "pack/main/start/CSApprox"]
 	path = pack/main/start/CSApprox
 	url = https://github.com/vim-scripts/CSApprox
+[submodule "pack/main/start/YouCompleteMe"]
+	path = pack/main/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe
