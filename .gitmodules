@@ -1,6 +1,3 @@
-[submodule "sources_non_forked/editorconfig-vim"]
-	path = sources_non_forked/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim
 [submodule "sources_non_forked/julia-vim"]
 	path = sources_non_forked/julia-vim
 	url = https://github.com/JuliaLang/julia-vim.git
@@ -94,3 +91,6 @@
 [submodule "pack/main/start/ctrlp.vim"]
 	path = pack/main/start/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim.git
+[submodule "pack/main/start/editorconfig-vim"]
+	path = pack/main/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
