@@ -137,3 +137,5 @@ cnoremap <C-N> <Down>
 " => Abbreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 iab xdate <c-r>=strftime("%y/%m/%d %H:%M:%S")<cr>
+
+
