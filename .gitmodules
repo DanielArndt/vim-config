@@ -82,3 +82,6 @@
 [submodule "pack/main/start/powerline"]
 	path = pack/main/start/powerline
 	url = https://github.com/powerline/powerline.git
+[submodule "pack/main/start/vim-commentary"]
+	path = pack/main/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
