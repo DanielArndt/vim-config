@@ -107,7 +107,7 @@ set listchars=trail:·,tab:>·,precedes:^,extends:$
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+set statusline=\ %{HasPaste()}%f%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
 " Disable scrollbars (real hackers don't use scrollbars for navigation!)
 set guioptions-=r

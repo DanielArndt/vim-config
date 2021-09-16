@@ -1,4 +1,3 @@
 /local/*
 !/local/README
-backup
-temp_dirs
+history

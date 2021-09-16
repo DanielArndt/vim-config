@@ -11,12 +11,6 @@ runtime vimrcs/editor.vim
 runtime vimrcs/keybindings.vim
 
 " Initial setup:
-if !isdirectory($HOME."/.vim/temp_dirs")
-    call mkdir($HOME."/.vim/temp_dirs", "p")
-endif
-if !isdirectory($HOME."/.vim/backup")
-    call mkdir($HOME."/.vim/backup", "p")
-endif
 
 " Enable filetype plugins
 filetype plugin on
