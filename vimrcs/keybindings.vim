@@ -19,32 +19,6 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-" Close the current buffer
-map <leader>bd :Bclose<cr>
-
-" Close all the buffers
-map <leader>ba :bufdo bd<cr>
-
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
-
-" Let 'tl' toggle between this and the last accessed tab
-let g:lasttab = 1
-nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
-
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -63,6 +37,68 @@ func! DeleteTrailingWS()
 endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Parenthesis/bracket
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+vnoremap $1 <esc>`>a)<esc>`<i(<esc>
+vnoremap $2 <esc>`>a]<esc>`<i[<esc>
+vnoremap $3 <esc>`>a}<esc>`<i{<esc>
+vnoremap $$ <esc>`>a"<esc>`<i"<esc>
+vnoremap $q <esc>`>a'<esc>`<i'<esc>
+vnoremap $e <esc>`>a"<esc>`<i"<esc>
+
+" Map auto complete of (, ", ', [
+inoremap $1 ()<esc>i
+inoremap $2 []<esc>i
+inoremap $3 {}<esc>i
+inoremap $4 {<esc>o}<esc>O
+inoremap $q ''<esc>i
+inoremap $e ""<esc>i
+inoremap $t <><esc>i
+
+" If there are mutiple tags, ask which one the user wants to jump to
+nnoremap <C-]> g<C-]>
+
+" Local replace
+" nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+" The above didn't work in Julia... but probably works in other languages.
+nnoremap gr gd[[V][::s/<C-R>///gc<left><left><left>
+" Global replace
+nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+
+" F-keys
+function! ToggleBackground()
+    if (&background =~ "light")
+        exec "set background=dark"
+    else
+        exec "set background=light"
+    endif
+endfunction
+
+noremap <F3> :set wrap!<CR>
+noremap <F4> :set relativenumber!<CR>
+noremap <F6> :call ToggleBackground()<CR>
+inoremap <F6> <C-o>:call ToggleBackground()<CR>
+
+
+"""""""""""""
+" Leader keys
+"""""""""""""
+
+" Fast saving
+nmap <leader>w :w!<cr>
+noremap <leader>q <C-w>q
+
+" Disable highlight when <leader>/ is pressed
+map <silent> <leader>/ :noh<cr>
+
+" 'Follow' a tag in a second window pane on the right
+nnoremap <leader>] <C-w>o<C-w><C-v>g<C-]>zt
+
+" Inserts a newline and aligns the text
+nnoremap <leader><CR> i<CR><Esc>==
 
 " Do :help cope if you are unsure what cope is. It's super useful!
 "
@@ -98,44 +134,27 @@ map <leader>pp :setlocal paste!<cr>
 " todo list / scratch pad
 map <leader>, :e! ~/Documents/scratch.rst<cr>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Parenthesis/bracket
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vnoremap $1 <esc>`>a)<esc>`<i(<esc>
-vnoremap $2 <esc>`>a]<esc>`<i[<esc>
-vnoremap $3 <esc>`>a}<esc>`<i{<esc>
-vnoremap $$ <esc>`>a"<esc>`<i"<esc>
-vnoremap $q <esc>`>a'<esc>`<i'<esc>
-vnoremap $e <esc>`>a"<esc>`<i"<esc>
+" Useful mappings for managing tabs
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+map <leader>t<leader> :tabnext
 
-" Map auto complete of (, ", ', [
-inoremap $1 ()<esc>i
-inoremap $2 []<esc>i
-inoremap $3 {}<esc>i
-inoremap $4 {<esc>o}<esc>O
-inoremap $q ''<esc>i
-inoremap $e ""<esc>i
-inoremap $t <><esc>i
+" Close the current buffer
+map <leader>bd :Bclose<cr>
 
-" If there are mutiple tags, ask which one the user wants to jump to
-nnoremap <C-]> g<C-]>
+" Close all the buffers
+map <leader>ba :bufdo bd<cr>
 
-" 'Follow' a tag in a second window pane on the right
-nnoremap <leader>] <C-w>o<C-w><C-v>g<C-]>zt
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
-" Inserts a newline and aligns the text
-nnoremap <leader><CR> i<CR><Esc>==
-" Disable highlight when <leader>/ is pressed
-map <silent> <leader>/ :noh<cr>
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
-" Local replace
-" nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
-" The above didn't work in Julia... but probably works in other languages.
-nnoremap gr gd[[V][::s/<C-R>///gc<left><left><left>
-" Global replace
-nnoremap gR gD:%s/<C-R>///gc<left><left><left>
-
-" Fast saving
-nmap <leader>w :w!<cr>
-noremap <leader>q <C-w>q
-
+" Let 'tl' toggle between this and the last accessed tab
+let g:lasttab = 1
+nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
+au TabLeave * let g:lasttab = tabpagenr()

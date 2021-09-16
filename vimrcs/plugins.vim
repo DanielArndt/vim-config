@@ -50,17 +50,6 @@ map <leader>tb :TagbarToggle<CR>
 let g:ctrlp_extensions = ['tag']
 noremap <leader>u :CtrlPTag<CR>
 
-" Flake8 - Show me python errors as soon as I save
-function Flake8ifexists()
-    if executable("flake8")
-        call Flake8()
-    endif
-endfunction
-
-autocmd BufWritePost *.py call Flake8ifexists()
-let g:flake8_show_quickfix=0  " don't show
-let g:flake8_show_in_gutter=1  " show in gutter instead
-
 let g:bookmark_auto_close=1 " Auto close bookmark window
 let g:bookmark_manage_per_buffer=1
 

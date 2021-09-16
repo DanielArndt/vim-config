@@ -21,7 +21,7 @@ endif
 set ruler
 
 " Height of the command bar
-set cmdheight=2
+" set cmdheight=2
 
 " A buffer becomes hidden when it is abandoned
 set hid
@@ -114,3 +114,8 @@ set guioptions-=r
 set guioptions-=R
 set guioptions-=l
 set guioptions-=L
+
+function MyCustomHighlights()
+    hi semshiSelected        ctermfg=231 guifg=#ffffff ctermbg=247 guibg=#d7005f
+endfunction
+autocmd FileType python call MyCustomHighlights()
