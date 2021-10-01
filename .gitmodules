@@ -46,10 +46,6 @@
 	path = sources_non_forked/vim-indentwise
 	url = https://github.com/jeetsukumaran/vim-indentwise.git
 	ignore = untracked
-[submodule "sources_non_forked/vim-multiple-cursors"]
-	path = sources_non_forked/vim-multiple-cursors
-	url = git@github.com:terryma/vim-multiple-cursors.git
-	ignore = untracked
 [submodule "sources_non_forked/papercolor-theme"]
 	path = pack/theme/start/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme
