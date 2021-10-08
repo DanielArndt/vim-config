@@ -1,7 +1,3 @@
-[submodule "sources_non_forked/vim-flake8"]
-	path = sources_non_forked/vim-flake8
-	url = https://github.com/nvie/vim-flake8
-	ignore = untracked
 [submodule "sources_non_forked/vim-misc"]
 	path = sources_non_forked/vim-misc
 	url = https://github.com/xolox/vim-misc
@@ -37,10 +33,6 @@
 [submodule "sources_non_forked/vim-terraform"]
 	path = sources_non_forked/vim-terraform
 	url = https://github.com/hashivim/vim-terraform
-	ignore = untracked
-[submodule "sources_non_forked/vim-bookmarks"]
-	path = sources_non_forked/vim-bookmarks
-	url = https://github.com/MattesGroeger/vim-bookmarks.git
 	ignore = untracked
 [submodule "sources_non_forked/vim-indentwise"]
 	path = sources_non_forked/vim-indentwise
@@ -125,3 +117,12 @@
 [submodule "pack/main/start/vim-snippets"]
 	path = pack/main/start/vim-snippets
 	url = https://github.com/honza/vim-snippets
+[submodule "pack/main/start/vim-expand-region"]
+	path = pack/main/start/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region
+[submodule "pack/main/start/vim-indentwise"]
+	path = pack/main/start/vim-indentwise
+	url = https://github.com/jeetsukumaran/vim-indentwise
+[submodule "pack/main/start/python-mode"]
+	path = pack/main/start/python-mode
+	url = https://github.com/python-mode/python-mode
