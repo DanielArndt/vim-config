@@ -1,42 +1,6 @@
-[submodule "sources_non_forked/vim-misc"]
-	path = sources_non_forked/vim-misc
-	url = https://github.com/xolox/vim-misc
-	ignore = untracked
-[submodule "sources_non_forked/vim-virtualenv"]
-	path = sources_non_forked/vim-virtualenv
-	url = https://github.com/jmcantrell/vim-virtualenv
-	ignore = untracked
-[submodule "sources_non_forked/vim-solidity"]
-	path = sources_non_forked/vim-solidity
-	url = https://github.com/tomlion/vim-solidity.git
-	ignore = untracked
-[submodule "sources_non_forked/vim-table-mode"]
-	path = sources_non_forked/vim-table-mode
-	url = https://github.com/dhruvasagar/vim-table-mode.git
-	ignore = untracked
 [submodule "sources_non_forked/vim-tmux-navigator"]
 	path = pack/main/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
-	ignore = untracked
-[submodule "sources_non_forked/vim-surround"]
-	path = sources_non_forked/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-	ignore = untracked
-[submodule "sources_non_forked/vim-jsx"]
-	path = sources_non_forked/vim-jsx
-	url = https://github.com/mxw/vim-jsx
-	ignore = untracked
-[submodule "sources_non_forked/vim-javascript"]
-	path = sources_non_forked/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
-	ignore = untracked
-[submodule "sources_non_forked/vim-terraform"]
-	path = sources_non_forked/vim-terraform
-	url = https://github.com/hashivim/vim-terraform
-	ignore = untracked
-[submodule "sources_non_forked/vim-indentwise"]
-	path = sources_non_forked/vim-indentwise
-	url = https://github.com/jeetsukumaran/vim-indentwise.git
 	ignore = untracked
 [submodule "sources_non_forked/papercolor-theme"]
 	path = pack/theme/start/papercolor-theme
@@ -126,3 +90,9 @@
 [submodule "pack/main/start/python-mode"]
 	path = pack/main/start/python-mode
 	url = https://github.com/python-mode/python-mode
+[submodule "pack/main/start/vim-repeat"]
+	path = pack/main/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "pack/main/start/vim-surround"]
+	path = pack/main/start/vim-surround
+	url = https://github.com/tpope/vim-surround
