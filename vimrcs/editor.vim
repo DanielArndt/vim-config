@@ -21,6 +21,10 @@ set si "Smart indent
 set nowrap "Do not wrap lines
 
 
+" Set timeouts longer so keycombos work when I fumble
+set timeoutlen=1000
+
+
 " Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab

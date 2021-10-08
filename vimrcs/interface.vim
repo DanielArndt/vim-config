@@ -66,6 +66,11 @@ set tm=500
 
 " Add a bit extra margin to the left
 set foldcolumn=1
+" Open all folds to start
+" This seems to do the same thing as below... unsure which is better
+" autocmd BufWinEnter * let &foldlevel = max(map(range(1, line('$')), 'foldlevel(v:val)'))
+autocmd BufWinEnter * normal zR
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
