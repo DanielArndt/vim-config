@@ -124,3 +124,8 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 "   },
 " }
 " EOF
+"
+
+" This seems to make the cursor not move forward when pressing `.` for some reason
+" TODO: Figure out why, and see if this can be re-enabled
+let g:pymode_rope = 0
