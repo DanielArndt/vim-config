@@ -1,90 +1,98 @@
-[submodule "sources_non_forked/csapprox"]
-	path = sources_non_forked/csapprox
-	url = https://github.com/godlygeek/csapprox
-[submodule "sources_non_forked/editorconfig-vim"]
-	path = sources_non_forked/editorconfig-vim
-	url = https://github.com/editorconfig/editorconfig-vim
-[submodule "sources_non_forked/julia-vim"]
-	path = sources_non_forked/julia-vim
-	url = https://github.com/JuliaLang/julia-vim.git
-[submodule "sources_non_forked/riv.vim"]
-	path = sources_non_forked/riv.vim
-	url = https://github.com/Rykka/riv.vim
-[submodule "sources_non_forked/tagbar"]
-	path = sources_non_forked/tagbar
-	url = https://github.com/majutsushi/tagbar
-[submodule "sources_non_forked/vim-flake8"]
-	path = sources_non_forked/vim-flake8
-	url = https://github.com/nvie/vim-flake8
-[submodule "sources_non_forked/vim-misc"]
-	path = sources_non_forked/vim-misc
-	url = https://github.com/xolox/vim-misc
-[submodule "sources_non_forked/vim-virtualenv"]
-	path = sources_non_forked/vim-virtualenv
-	url = https://github.com/jmcantrell/vim-virtualenv
-[submodule "sources_non_forked/vim-fugitive"]
-	path = sources_non_forked/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive
-[submodule "sources_non_forked/vim-solidity"]
-	path = sources_non_forked/vim-solidity
-	url = https://github.com/tomlion/vim-solidity.git
-[submodule "sources_non_forked/vim-table-mode"]
-	path = sources_non_forked/vim-table-mode
-	url = https://github.com/dhruvasagar/vim-table-mode.git
-[submodule "sources_non_forked/YouCompleteMe"]
-	path = sources_non_forked/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
 [submodule "sources_non_forked/vim-tmux-navigator"]
-	path = sources_non_forked/vim-tmux-navigator
+	path = pack/main/start/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator.git
-[submodule "sources_non_forked/salt-vim"]
-	path = sources_non_forked/salt-vim
-	url = https://github.com/saltstack/salt-vim.git
-[submodule "sources_non_forked/syntastic"]
-	path = sources_non_forked/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "sources_non_forked/vim-surround"]
-	path = sources_non_forked/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "sources_non_forked/vim-jsx"]
-	path = sources_non_forked/vim-jsx
-	url = https://github.com/mxw/vim-jsx
-[submodule "sources_non_forked/vim-javascript"]
-	path = sources_non_forked/vim-javascript
-	url = https://github.com/pangloss/vim-javascript
-[submodule "sources_non_forked/vim-terraform"]
-	path = sources_non_forked/vim-terraform
-	url = https://github.com/hashivim/vim-terraform
-[submodule "sources_non_forked/groovy.vim"]
-	path = sources_non_forked/groovy.vim
-	url = https://github.com/vim-scripts/groovy.vim.git
-[submodule "sources_non_forked/ultisnips"]
-	path = sources_non_forked/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule "sources_non_forked/vim-bookmarks"]
-	path = sources_non_forked/vim-bookmarks
-	url = https://github.com/MattesGroeger/vim-bookmarks.git
-[submodule "sources_non_forked/vim-indentwise"]
-	path = sources_non_forked/vim-indentwise
-	url = https://github.com/jeetsukumaran/vim-indentwise.git
-[submodule "sources_non_forked/python-syntax"]
-	path = sources_non_forked/python-syntax
-	url = https://github.com/vim-python/python-syntax
-[submodule "sources_non_forked/nginx.vim"]
-	path = sources_non_forked/nginx.vim
-	url = https://github.com/chr4/nginx.vim
-[submodule "sources_non_forked/vim-multiple-cursors"]
-	path = sources_non_forked/vim-multiple-cursors
-	url = git@github.com:terryma/vim-multiple-cursors.git
-[submodule "sources_non_forked/neoyank.vim"]
-	path = sources_non_forked/neoyank.vim
-	url = https://github.com/Shougo/neoyank.vim
-[submodule "sources_non_forked/denite.nvim"]
-	path = sources_non_forked/denite.nvim
-	url = https://github.com/Shougo/denite.nvim
-[submodule "sources_non_forked/jq.vim"]
-	path = sources_non_forked/jq.vim
-	url = https://github.com/vito-c/jq.vim
+	ignore = untracked
 [submodule "sources_non_forked/papercolor-theme"]
-	path = sources_non_forked/papercolor-theme
+	path = pack/theme/start/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme
+	ignore = untracked
+[submodule "pack/main/start/vim-fugitive"]
+	path = pack/main/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+	ignore = untracked
+[submodule "pack/theme/start/papercolor-theme"]
+	path = pack/theme/start/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme.git
+	ignore = untracked
+[submodule "pack/main/start/CSApprox"]
+	path = pack/main/start/CSApprox
+	url = https://github.com/vim-scripts/CSApprox
+	ignore = untracked
+[submodule "pack/main/start/YouCompleteMe"]
+	path = pack/main/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe
+	ignore = untracked
+[submodule "pack/main/start/ctrlp.vim"]
+	path = pack/main/start/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim.git
+	ignore = untracked
+[submodule "pack/main/start/editorconfig-vim"]
+	path = pack/main/start/editorconfig-vim
+	url = https://github.com/editorconfig/editorconfig-vim.git
+	ignore = untracked
+[submodule "pack/main/start/jq.vim"]
+	path = pack/lang/start/jq.vim
+	url = https://github.com/vito-c/jq.vim.git
+	ignore = untracked
+[submodule "pack/main/lang/start/semshi"]
+	path = pack/lang/start/semshi
+	url = https://github.com/numirias/semshi.git
+	ignore = untracked
+[submodule "pack/lang/opt/nvim-treesitter"]
+	path = pack/lang/opt/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+	ignore = untracked
+[submodule "pack/main/start/nerdtree"]
+	path = pack/main/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+	ignore = untracked
+[submodule "pack/main/start/open_file_under_cursor.vim"]
+	path = pack/main/start/open_file_under_cursor.vim
+	url = https://github.com/amix/open_file_under_cursor.vim
+	ignore = untracked
+[submodule "pack/main/start/syntastic"]
+	path = pack/main/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic
+	ignore = untracked
+[submodule "pack/main/start/tagbar"]
+	path = pack/main/start/tagbar
+	url = https://github.com/preservim/tagbar.git
+	ignore = untracked
+[submodule "pack/main/start/powerline"]
+	path = pack/main/start/powerline
+	url = https://github.com/powerline/powerline.git
+	ignore = untracked
+[submodule "pack/main/start/vim-commentary"]
+	path = pack/main/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+	ignore = untracked
+[submodule "pack/main/start/vim-gitgutter"]
+	path = pack/main/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "pack/lang/start/vim-terraform"]
+	path = pack/lang/start/vim-terraform
+	url = https://github.com/hashivim/vim-terraform
+[submodule "pack/lang/start/vim-python-pep8-indent"]
+	path = pack/lang/start/vim-python-pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent
+[submodule "pack/main/start/ultisnips"]
+	path = pack/main/start/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "pack/main/start/vim-snippets"]
+	path = pack/main/start/vim-snippets
+	url = https://github.com/honza/vim-snippets
+[submodule "pack/main/start/vim-expand-region"]
+	path = pack/main/start/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region
+[submodule "pack/main/start/vim-indentwise"]
+	path = pack/main/start/vim-indentwise
+	url = https://github.com/jeetsukumaran/vim-indentwise
+[submodule "pack/main/start/python-mode"]
+	path = pack/main/start/python-mode
+	url = https://github.com/python-mode/python-mode
+[submodule "pack/main/start/vim-repeat"]
+	path = pack/main/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule "pack/main/start/vim-surround"]
+	path = pack/main/start/vim-surround
+	url = https://github.com/tpope/vim-surround
