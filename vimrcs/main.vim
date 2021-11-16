@@ -16,15 +16,6 @@ runtime vimrcs/keybindings.vim
 filetype plugin on
 filetype indent on
 
-
-
-" Show line numbers
-set number
-
-" Set a long line marker at the same location as textwidth
-set colorcolumn=+1
-" Highlight current line - allows you to track cursor position more easily
-set cursorline
 " Automatically indent when moving to a new line
 set autoindent
 
@@ -60,16 +51,6 @@ set splitright
 
 " I don't ever use ex mode, get out of my way!
 nnoremap Q <nop>
-
-
-"""""""""
-" F-keys
-"""""""""
-" Toggle paste mode with F2
-set pastetoggle=<F2>
-" Refresh
-map <F5> :e!<CR>:syntax sync fromstart<CR>
-imap <F5> <C-o><F5>
 
 " Ctrl-w Ctrl-w goes to last window. Who the hell wants to cycle?
 noremap <C-w><C-w> <C-w><C-p>

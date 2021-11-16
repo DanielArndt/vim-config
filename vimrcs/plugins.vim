@@ -2,6 +2,12 @@
 " somewhere, open it in the current window
 let g:ctrlp_jump_to_buffer = 0
 
+" Use git for ctrlp
+" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
+
+
 " Close tagbar after selecting something
 let g:tagbar_autoclose = 1
 

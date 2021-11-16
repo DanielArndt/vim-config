@@ -13,6 +13,9 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 map j gj
 map k gk
 
+" 0 goes to start of line respecting indents
+nmap 0 ^
+
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -77,8 +80,12 @@ function! ToggleBackground()
     endif
 endfunction
 
+set pastetoggle=<F2>
 noremap <F3> :set wrap!<CR>
 noremap <F4> :set relativenumber!<CR>
+" Refresh
+map <F5> :e!<CR>:syntax sync fromstart<CR>
+imap <F5> <C-o><F5>
 noremap <F6> :call ToggleBackground()<CR>
 inoremap <F6> <C-o>:call ToggleBackground()<CR>
 
@@ -87,8 +94,10 @@ inoremap <F6> <C-o>:call ToggleBackground()<CR>
 " Leader keys
 """""""""""""
 
+nmap <leader><leader> :silent ! .git/hooks/ctags<cr>
 " Fast saving
 nmap <leader>w :w!<cr>
+" Fast quit
 noremap <leader>q <C-w>q
 
 " Disable highlight when <leader>/ is pressed

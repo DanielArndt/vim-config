@@ -3,6 +3,13 @@ colorscheme PaperColor
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Show line numbers
+set number
+
+" Set a long line marker at the same location as textwidth
+set colorcolumn=+1
+" Highlight current line - allows you to track cursor position more easily
+set cursorline
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
 
