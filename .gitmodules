@@ -51,7 +51,7 @@
 	url = https://github.com/amix/open_file_under_cursor.vim
 	ignore = untracked
 [submodule "pack/main/start/syntastic"]
-	path = pack/main/start/syntastic
+	path = pack/lang/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic
 	ignore = untracked
 [submodule "pack/main/start/tagbar"]
@@ -88,7 +88,7 @@
 	path = pack/main/start/vim-indentwise
 	url = https://github.com/jeetsukumaran/vim-indentwise
 [submodule "pack/main/start/python-mode"]
-	path = pack/main/start/python-mode
+	path = pack/lang/start/python-mode
 	url = https://github.com/python-mode/python-mode
 [submodule "pack/main/start/vim-repeat"]
 	path = pack/main/start/vim-repeat
@@ -99,3 +99,6 @@
 [submodule "pack/lang/start/vim-toml"]
 	path = pack/lang/start/vim-toml
 	url = https://github.com/cespare/vim-toml
+[submodule "pack/lang/start/Vim-Jinja2-Syntax"]
+	path = pack/lang/start/Vim-Jinja2-Syntax
+	url = https://github.com/Glench/Vim-Jinja2-Syntax
