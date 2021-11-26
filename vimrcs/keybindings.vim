@@ -14,7 +14,7 @@ map j gj
 map k gk
 
 " 0 goes to start of line respecting indents
-nmap 0 ^
+nmap 0 0^
 
 " Smart way to move between windows
 map <C-j> <C-W>j
