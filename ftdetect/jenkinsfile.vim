@@ -1,1 +1,1 @@
-autocmd BufNewFile,BufRead *Jenkinsfile* set ft=groovy
+autocmd BufNewFile,BufRead *Jenkinsfile* set filetype=groovy

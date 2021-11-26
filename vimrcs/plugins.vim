@@ -135,3 +135,7 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 " This seems to make the cursor not move forward when pressing `.` for some reason
 " TODO: Figure out why, and see if this can be re-enabled
 let g:pymode_rope = 0
+
+" Autoformat terraform:
+let g:terraform_fmt_on_save=1
+let g:terraform_align=1

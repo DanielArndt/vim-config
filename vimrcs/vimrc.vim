@@ -1,5 +1,6 @@
 set runtimepath+=~/.vim
 set packpath+=~/.vim
+set runtimepath+=~/.vim/local
 set packpath+=~/.vim/local
 
 source ~/.vim/vimrcs/main.vim

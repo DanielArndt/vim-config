@@ -113,4 +113,8 @@ cnoremap <C-N> <Down>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 iab xdate <c-r>=strftime("%y/%m/%d %H:%M:%S")<cr>
 
-
+" DBT filetype detection. Placed here because ftdetect/ loads before the plugin for Jinja syntax
+augroup filetypedetect
+  autocmd BufNewFile,BufRead *.sql setlocal filetype=dbt
+augroup END
+" let g:sql_type_default="dbt"
