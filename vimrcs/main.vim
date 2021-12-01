@@ -65,7 +65,16 @@ noremap <C-_> {v}gq<C-o><C-o>
 
 " Close all buffers
 " Avoid weird behaviour where nerdtree opens full screen
-noremap <leader>ba :NERDTreeClose<CR>:bufdo bd<CR>
+noremap <leader>ba :NERDTreeClose<CR>:bufdo bd<CR>:echo "Closed all buffers"<CR>
+" kill-all but visible buffers
+func! Clean_buffers()
+    let l:buffers = filter(getbufinfo(), {_, v -> v.hidden})
+    if !empty(l:buffers)
+        execute 'bwipeout' join(map(l:buffers, {_, v -> v.bufnr}))
+    endif
+endfunc
+" kill-all but visible buffers
+nnoremap <silent> <leader>bc :call Clean_buffers()<CR>:echo "Cleaned up all hidden buffers"<CR>
 
 
 " Surround text in double ticks
@@ -111,10 +120,20 @@ cnoremap <C-N> <Down>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Abbreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-iab xdate <c-r>=strftime("%y/%m/%d %H:%M:%S")<cr>
+iab xdate <c-r>=strftime("%d %b %Y")<cr>
+iab xdatet <c-r>=strftime("%y/%m/%d %H:%M:%S")<cr>
 
-" DBT filetype detection. Placed here because ftdetect/ loads before the plugin for Jinja syntax
-augroup filetypedetect
-  autocmd BufNewFile,BufRead *.sql setlocal filetype=dbt
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Make the parent directories for this file if they don't already exist
+function s:MkNonExDir(file, buf)
+    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+        let dir=fnamemodify(a:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+endfunction
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 augroup END
-" let g:sql_type_default="dbt"
