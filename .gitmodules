@@ -102,3 +102,12 @@
 [submodule "pack/lang/start/Vim-Jinja2-Syntax"]
 	path = pack/lang/start/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax
+[submodule "pack/lang/start/vim-polyglot"]
+	path = pack/lang/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule "pack/lang/start/vim-flake8"]
+	path = pack/lang/start/vim-flake8
+	url = https://github.com/nvie/vim-flake8
+[submodule "pack/lang/start/vim-virtualenv"]
+	path = pack/lang/start/vim-virtualenv
+	url = https://github.com/jmcantrell/vim-virtualenv

@@ -121,7 +121,7 @@ cnoremap <C-N> <Down>
 " => Abbreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 iab xdate <c-r>=strftime("%d %b %Y")<cr>
-iab xdatet <c-r>=strftime("%y/%m/%d %H:%M:%S")<cr>
+iab xdatetime <c-r>=strftime("%y/%m/%d %H:%M:%S")<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Make the parent directories for this file if they don't already exist

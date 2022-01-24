@@ -82,6 +82,7 @@ endfunction
 
 set pastetoggle=<F2>
 noremap <F3> :set wrap!<CR>
+imap <F3> <C-o><F3>
 noremap <F4> :set relativenumber!<CR>
 " Refresh
 map <F5> :e!<CR>:syntax sync fromstart<CR>
