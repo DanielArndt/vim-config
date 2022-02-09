@@ -1,32 +1,9 @@
-" Don't go to the buffer when using ctrlp and the buffer is already open
-" somewhere, open it in the current window
-let g:ctrlp_jump_to_buffer = 0
-
-" Use git for ctrlp
-" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-
-
-
-" Close tagbar after selecting something
-let g:tagbar_autoclose = 1
-
-" Kill buffers in Ctrl-P with Ctrl-q
-" https://github.com/kien/ctrlp.vim/issues/280
-let g:ctrlp_buffer_func = { 'enter': 'CtrlPEnter' }
-func! CtrlPEnter()
-  nnoremap <buffer> <silent> <C-q> :call <sid>CtrlPDeleteBuffer()<cr>
-endfunc
-func! s:CtrlPDeleteBuffer()
-  let line = getline('.')
-  let bufid = line =~ '\[\d\+\*No Name\]$' ?
-    \ str2nr(matchstr(line, '\d\+')) :
-    \ fnamemodify(line[2:], ':p')
-  exec "bd" bufid
-  exec "norm \<F5>"
-endfunc
-
+"------------------------------------------------------------------------------
+" YouCompleteMe
+"------------------------------------------------------------------------------
 let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 "------------------------------------------------------------------------------
 " NERDTree
@@ -49,28 +26,18 @@ map <leader>T :NERDTreeFind<cr>
 " Close NERDTree after opening a file
 let NERDTreeQuitOnOpen=1
 
+"------------------------------------------------------------------------------
 " Tagbar
+"------------------------------------------------------------------------------
 map <leader>tb :TagbarToggle<CR>
+" Close tagbar after selecting something
+let g:tagbar_autoclose = 1
 
-" CtrlP tags browsing
-let g:ctrlp_extensions = ['tag']
-noremap <leader>u :CtrlPTag<CR>
-
+"------------------------------------------------------------------------------
+" Bookmarks
+"------------------------------------------------------------------------------
 let g:bookmark_auto_close=1 " Auto close bookmark window
 let g:bookmark_manage_per_buffer=1
-
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-
-""""""""""""""""""""""""""""""
-" => bufExplorer plugin
-""""""""""""""""""""""""""""""
-let g:bufExplorerDefaultHelp=0
-let g:bufExplorerShowRelativePath=1
-let g:bufExplorerFindActive=1
-let g:bufExplorerSortBy='name'
-map <leader>o :BufExplorer<cr>
-
 
 """"""""""""""""""""""""""""""
 " => MRU plugin
@@ -81,6 +48,13 @@ map <leader>f :MRU<CR>
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
+" Don't go to the buffer when using ctrlp and the buffer is already open
+" somewhere, open it in the current window
+let g:ctrlp_jump_to_buffer = 0
+
+" Use git for ctrlp
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
 let g:ctrlp_working_path_mode = 0
 
 let g:ctrlp_map = '<c-f>'
@@ -89,6 +63,25 @@ map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
 let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+
+" Kill buffers in Ctrl-P with Ctrl-q
+" https://github.com/kien/ctrlp.vim/issues/280
+let g:ctrlp_buffer_func = { 'enter': 'CtrlPEnter' }
+func! CtrlPEnter()
+  nnoremap <buffer> <silent> <C-q> :call <sid>CtrlPDeleteBuffer()<cr>
+endfunc
+func! s:CtrlPDeleteBuffer()
+  let line = getline('.')
+  let bufid = line =~ '\[\d\+\*No Name\]$' ?
+    \ str2nr(matchstr(line, '\d\+')) :
+    \ fnamemodify(line[2:], ':p')
+  exec "bd" bufid
+  exec "norm \<F5>"
+endfunc
+
+" CtrlP tags browsing
+let g:ctrlp_extensions = ['tag']
+noremap <leader>u :CtrlPTag<CR>
 
 """"""""""""""""""""""""""""""
 " => UltiSnips
@@ -114,28 +107,19 @@ map <leader>nf :NERDTreeFind<cr>
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
-" packadd nvim-treesitter
-" lua <<EOF
-" require'nvim-treesitter.configs'.setup {
-"   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-"   ignore_install = { "javascript" }, -- List of parsers to ignore installing
-"   highlight = {
-"     enable = true,              -- false will disable the whole extension
-"     -- disable = { "c", "rust" },  -- list of language that will be disabled
-"     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-"     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-"     -- Using this option may slow down your editor, and you may see some duplicate highlights.
-"     -- Instead of true it can also be a list of languages
-"     additional_vim_regex_highlighting = false,
-"   },
-" }
-" EOF
-"
-
 " This seems to make the cursor not move forward when pressing `.` for some reason
 " TODO: Figure out why, and see if this can be re-enabled
 let g:pymode_rope = 0
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Terraform
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autoformat terraform:
 let g:terraform_fmt_on_save=1
 let g:terraform_align=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Local Vim RC
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Reload .lvimrc if 'Y' was given as answer (not 'y')
+let g:localvimrc_persistent = 1

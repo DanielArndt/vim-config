@@ -50,10 +50,6 @@
 	path = pack/main/start/open_file_under_cursor.vim
 	url = https://github.com/amix/open_file_under_cursor.vim
 	ignore = untracked
-[submodule "pack/main/start/syntastic"]
-	path = pack/lang/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic
-	ignore = untracked
 [submodule "pack/main/start/tagbar"]
 	path = pack/main/start/tagbar
 	url = https://github.com/preservim/tagbar.git
@@ -72,9 +68,6 @@
 [submodule "pack/lang/start/vim-terraform"]
 	path = pack/lang/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform
-[submodule "pack/lang/start/vim-python-pep8-indent"]
-	path = pack/lang/start/vim-python-pep8-indent
-	url = https://github.com/Vimjas/vim-python-pep8-indent
 [submodule "pack/main/start/ultisnips"]
 	path = pack/main/start/ultisnips
 	url = https://github.com/SirVer/ultisnips
@@ -87,9 +80,6 @@
 [submodule "pack/main/start/vim-indentwise"]
 	path = pack/main/start/vim-indentwise
 	url = https://github.com/jeetsukumaran/vim-indentwise
-[submodule "pack/main/start/python-mode"]
-	path = pack/lang/start/python-mode
-	url = https://github.com/python-mode/python-mode
 [submodule "pack/main/start/vim-repeat"]
 	path = pack/main/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat
@@ -120,3 +110,9 @@
 [submodule "pack/lang/start/markdown-preview.nvim"]
 	path = pack/lang/start/markdown-preview.nvim
 	url = https://github.com/iamcco/markdown-preview.nvim
+[submodule "pack/lang/start/ale"]
+	path = pack/lang/start/ale
+	url = https://github.com/dense-analysis/ale
+[submodule "pack/main/start/vim-localvimrc"]
+	path = pack/main/start/vim-localvimrc
+	url = https://github.com/embear/vim-localvimrc
