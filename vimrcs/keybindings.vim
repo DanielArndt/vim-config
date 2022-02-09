@@ -9,11 +9,25 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Close the current buffer
+map <leader>bd :Bclose<cr>
+" Close the buffer and window
+map <leader>bq :Bclose<cr>:q<cr>
+
+" Close all the buffers
+map <leader>ba :bufdo bd<cr>
+
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " Treat long lines as break lines (useful when moving around in them)
 map j gj
 map k gk
 
-" 0 goes to start of line respecting indents
+" 0 goes to start of line respecting indents, aligns window for long lines
 nmap 0 0^
 
 " Smart way to move between windows
@@ -81,14 +95,17 @@ function! ToggleBackground()
 endfunction
 
 set pastetoggle=<F2>
+
 noremap <F3> :set wrap!<CR>
 imap <F3> <C-o><F3>
+
 noremap <F4> :set relativenumber!<CR>
 " Refresh
 map <F5> :e!<CR>:syntax sync fromstart<CR>
 imap <F5> <C-o><F5>
-noremap <F6> :call ToggleBackground()<CR>
-inoremap <F6> <C-o>:call ToggleBackground()<CR>
+
+map <F6> :call ToggleBackground()<CR>
+imap <F6> <C-o><F6>
 
 
 """""""""""""
@@ -151,18 +168,6 @@ map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 map <leader>t<leader> :tabnext
 
-" Close the current buffer
-map <leader>bd :Bclose<cr>
-
-" Close all the buffers
-map <leader>ba :bufdo bd<cr>
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
