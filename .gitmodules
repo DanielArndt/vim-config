@@ -117,3 +117,6 @@
 [submodule "pack/lang/start/vim-solidity"]
 	path = pack/lang/start/vim-solidity
 	url = https://github.com/tomlion/vim-solidity
+[submodule "pack/lang/start/markdown-preview.nvim"]
+	path = pack/lang/start/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim
