@@ -111,3 +111,9 @@
 [submodule "pack/lang/start/vim-virtualenv"]
 	path = pack/lang/start/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv
+[submodule "pack/lang/start/vim-gfm-syntax"]
+	path = pack/lang/start/vim-gfm-syntax
+	url = https://github.com/rhysd/vim-gfm-syntax
+[submodule "pack/lang/start/vim-solidity"]
+	path = pack/lang/start/vim-solidity
+	url = https://github.com/tomlion/vim-solidity
