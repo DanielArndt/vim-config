@@ -77,6 +77,7 @@
 [submodule "pack/main/start/vim-expand-region"]
 	path = pack/main/start/vim-expand-region
 	url = https://github.com/terryma/vim-expand-region
+	ignore = untracked
 [submodule "pack/main/start/vim-indentwise"]
 	path = pack/main/start/vim-indentwise
 	url = https://github.com/jeetsukumaran/vim-indentwise

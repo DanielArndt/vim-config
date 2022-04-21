@@ -123,3 +123,25 @@ let g:terraform_align=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Reload .lvimrc if 'Y' was given as answer (not 'y')
 let g:localvimrc_persistent = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => ALE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_python_pylsp_executable = "pylsp"
+let g:ale_python_pylsp_auto_poetry = 1
+
+let g:ale_python_pylsp_config = {
+\   'pylsp': {
+\     'plugins': {
+\       'pycodestyle': {
+\         'enabled': v:false,
+\       },
+\       'pyflakes': {
+\         'enabled': v:false,
+\       },
+\       'pydocstyle': {
+\         'enabled': v:false,
+\       },
+\     },
+\   },
+\}

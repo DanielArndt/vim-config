@@ -7,6 +7,9 @@ set shiftwidth=4
 set expandtab
 
 " Check Python files with flake8 and pylint.
-let b:ale_linters = ['flake8']
+let b:ale_linters = ['flake8', 'pylsp']
 " Fix Python files with autopep8 and yapf.
-let b:ale_fixers = ['black']
+let b:ale_fixers = ['isort', 'black']
+
+" Add the following to .lvimrc in the project root to enable auto-fix on save
+" let g:ale_fix_on_save = 1

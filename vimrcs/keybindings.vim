@@ -107,6 +107,9 @@ imap <F5> <C-o><F5>
 map <F6> :call ToggleBackground()<CR>
 imap <F6> <C-o><F6>
 
+map <F8> :ALEFix<CR>
+imap <F8> <C-o><F6>
+
 
 """""""""""""
 " Leader keys
