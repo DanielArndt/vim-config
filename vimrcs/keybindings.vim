@@ -115,9 +115,9 @@ imap <F8> <C-o><F6>
 " Leader keys
 """""""""""""
 
-nmap <leader><leader> :silent ! .git/hooks/ctags<cr>
+" nmap <leader><leader> :silent ! .git/hooks/ctags<cr>
 " Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader><leader> :w!<cr>
 " Fast quit
 noremap <leader>q <C-w>q
 
